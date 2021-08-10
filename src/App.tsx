@@ -10,12 +10,14 @@ const Container = tw.div`
 `
 
 const Text = tw(motion.h1)`
-  text-6xl font-extrabold
+  text-3xl font-extrabold
   tracking-widest uppercase
   text-gray-100
 `
 
 const SubText = tw(Text)`text-xl font-medium tracking-wide`
+
+const Title = tw(SubText)`text-sm`
 
 const Image = tw(motion.img)`object-center rounded-full shadow-xl border-4`
 
@@ -145,7 +147,7 @@ function App() {
   return (
     <Container>
       <Image
-        src="https://scontent.fmnl4-1.fna.fbcdn.net/v/t1.0-9/76695227_419986712238950_4227379487311921152_o.jpg?_nc_cat=103&ccb=2&_nc_sid=09cbfe&_nc_ohc=pxkB-cEi5HEAX-HSMG-&_nc_ht=scontent.fmnl4-1.fna&oh=3850f5505fe83b2876fe07ffdf5e8d0d&oe=5FC5C39D"
+        src="https://github.com/joseederangojr.png"
         width="300"
         height="300"
         initial={{ opacity: 0, scale: 0, rotate: 360 }}
@@ -157,9 +159,25 @@ function App() {
       <SubText initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }}>
         Building quality software
       </SubText>
+      <Title initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }}>
+        Software Engineer &mdash;{' '}
+        <a
+          href="https://developer.manulife.ca"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Manulife Business Processing Services
+        </a>
+      </Title>
       <IconList>
         {links.map(({ Icon, title, link }) => (
-          <Link key={title} title={title} href={link} target="_blank">
+          <Link
+            key={title}
+            title={title}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Icon />
           </Link>
         ))}
