@@ -34,7 +34,8 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "coverage": "craco test --coverage"
+    "coverage": "craco test --coverage",
+    "deploy": "gh-pages -d build --no-history"
   },
   "eslintConfig": {
     "extends": "react-app"
