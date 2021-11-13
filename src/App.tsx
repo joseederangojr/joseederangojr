@@ -119,27 +119,27 @@ const links = [
   {
     title: 'Facebook',
     Icon: Facebook,
-    link: 'https://facebook.com/joseederangojr',
+    link: process.env.REACT_APP_FACEBOOK_URL,
   },
   {
     title: 'Twitter',
     Icon: Twitter,
-    link: 'https://twitter.com/joseederangojr',
+    link: process.env.REACT_APP_TWITTER_URL,
   },
   {
     title: 'Github',
     Icon: Github,
-    link: 'https://github.com/joseederangojr',
+    link: process.env.REACT_APP_GITHUB_URL,
   },
   {
     title: 'LinkedIn',
     Icon: LinkedIn,
-    link: 'https://linkedin.com/in/joseederangojr',
+    link: process.env.REACT_APP_LINKEDIN_URL,
   },
   {
     title: 'Email',
     Icon: Email,
-    link: 'mailto:joseederangojr@gmail.com',
+    link: `mailto:${process.env.REACT_APP_EMAIL_URL}`,
   },
 ]
 
@@ -166,7 +166,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Manulife Business Processing Services
+          Manulife
         </a>
       </Title>
       <IconList>
