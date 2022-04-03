@@ -1,4 +1,4 @@
-Hello, I'm Jose Ederango Jr. a Software Engineer based in Metro Manila, Philippines. Currently working for Manulife. On my vacant time mostly I'm reading Manga or watching Anime sometimes I read some tech articles online.
+Hello, I'm Jose Ederango Jr. a Software Engineer based in Metro Manila, Philippines. 
 
 Follow me on my socials:
 IG/FB/TWT: @joseederangojr
