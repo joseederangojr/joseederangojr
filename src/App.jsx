@@ -1,6 +1,7 @@
-import React from 'react'
-import tw from 'twin.macro'
 import { motion } from 'framer-motion'
+import * as React from 'react'
+import tw from 'twin.macro'
+import config from './config.json'
 
 const Container = tw.div`
   w-screen h-screen
@@ -119,27 +120,27 @@ const links = [
   {
     title: 'Facebook',
     Icon: Facebook,
-    link: process.env.REACT_APP_FACEBOOK_URL,
+    link: config.facebook,
   },
   {
     title: 'Twitter',
     Icon: Twitter,
-    link: process.env.REACT_APP_TWITTER_URL,
+    link: config.twitter,
   },
   {
     title: 'Github',
     Icon: Github,
-    link: process.env.REACT_APP_GITHUB_URL,
+    link: config.github,
   },
   {
     title: 'LinkedIn',
     Icon: LinkedIn,
-    link: process.env.REACT_APP_LINKEDIN_URL,
+    link: config.linkedin,
   },
   {
     title: 'Email',
     Icon: Email,
-    link: `mailto:${process.env.REACT_APP_EMAIL_URL}`,
+    link: `mailto:${config.email}`,
   },
 ]
 
@@ -160,13 +161,9 @@ function App() {
         Building quality software
       </SubText>
       <Title initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }}>
-        Software Engineer &mdash;{' '}
-        <a
-          href="https://developer.manulife.ca"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Manulife
+        {config.work.title} &mdash;{' '}
+        <a href={config.work.link} target="_blank" rel="noopener noreferrer">
+          {config.work.company}
         </a>
       </Title>
       <IconList>
